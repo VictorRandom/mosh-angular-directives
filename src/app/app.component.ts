@@ -7,8 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   courses = [1, 2];
-
   viewMode = 'map';
+  isActive: boolean = true;
+
 
   courses2 = [
     { id: 1, name: 'course1' },
@@ -39,6 +40,10 @@ export class AppComponent {
 
   trackCourse(index:any, course:any){
     return course? course.id : undefined;
+  }
+
+  changeBackground(){
+    this.isActive = !this.isActive;
   }
 
 }
