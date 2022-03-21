@@ -9,6 +9,7 @@ export class AppComponent {
   courses = [1, 2];
   viewMode = 'map';
   isActive: boolean = true;
+  canSave = true;
 
 
   courses2 = [

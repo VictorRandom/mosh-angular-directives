@@ -90,8 +90,9 @@
 </ul>
 
 
-<!-- NGFOR & trackby =========================================================== -->
+<!-- NGCLASS =========================================================== -->
 <br><br><br><br><br>
+<h3>ngClass</h3>
 <div
   (click)="changeBackground()"
   class="teste"
@@ -100,3 +101,26 @@
     'b': !isActive
   }"
 >
+
+
+<!-- NGSTYLE =========================================================== -->
+<br><br><br><br><br>
+<h3>ngStyle</h3>
+
+<button
+  [style.backgroundColor]="canSave ? 'blue' : 'gray'"
+  [style.color]="canSave ? 'white' : 'black'"
+  [style.fontWeight]="canSave ? 'bold' : 'normal'"
+>
+Save
+</button>
+
+<button
+  [ngStyle]="{
+    'backgroundColor': canSave ? 'blue' : 'gray',
+    'color': canSave ? 'white' : 'black',
+    'fontWeight': canSave ? 'bold' : 'normal'
+  }"
+>
+Save
+</button>
