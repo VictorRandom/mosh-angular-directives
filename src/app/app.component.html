@@ -67,8 +67,11 @@
 <!-- NGFOR ============================================================ -->
 <br><br><br><br><br>
 <h3>ngFor</h3>
+<button class="btn btn-secondary" (click)="onAdd()">Add</button>
 <ul>
   <li *ngFor="let course of courses2; index as i; even as isEven">
     {{ i + 1 }} - {{ course.name }} <span *ngIf="isEven">(EVEN)</span>
+    <button class="btn btn-danger" (click)="onRemove(course)">Remove</button>
+    <button class="btn btn-warning" (click)="onChange(course)">Change</button>
   </li>
 </ul>
