@@ -10,6 +10,12 @@ export class AppComponent {
   viewMode = 'map';
   isActive: boolean = true;
   canSave = true;
+  task={
+    title: 'Review applications',
+    assignee: {
+      name: null
+    }
+  }
 
 
   courses2 = [

@@ -124,3 +124,13 @@ Save
 >
 Save
 </button>
+
+
+<!-- NGSTYLE =========================================================== -->
+<br><br><br><br><br>
+<h3 [ngStyle]="{'color': 'black'}">ngStyle</h3>
+
+<span
+  [ngStyle]="{'color': 'black'}"
+  *ngIf="task.assignee"
+  >{{ task.assignee?.name }}</span>
