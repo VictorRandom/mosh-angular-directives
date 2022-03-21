@@ -1,5 +1,6 @@
 
 <!-- NGIF ============================================================== -->
+<h3>ngIf</h3>
 <div *ngIf="courses.length > 0">
   List of courses
 </div>
@@ -29,8 +30,10 @@
   No courses yet
 </ng-template>
 
+
 <!-- HIDDEN PROPERTY===================================================== -->
 <br><br><br><br><br>
+<h3>Hidden Property</h3>
 <div [hidden]="courses.length == 0">
   List of courses
 </div>
@@ -38,15 +41,17 @@
   No courses yet
 </div>
 
-<!-- NGSWITCHCASE===================================================== -->
+
+<!-- NGSWITCHCASE ======================================================= -->
 <br><br><br><br><br>
+<h3>ngSwitchCase</h3>
 <ul class="nav nav-pills">
   <li [class.active]="viewMode == 'map'">
     <a (click)="viewMode = 'map'" class="btn btn-primary" >
       Map View
     </a>
   </li>
-  <li [class.active]="viewMode == 'map'">
+  <li [class.active]="viewMode == 'list'">
     <a (click)="viewMode = 'list'" class="btn btn-primary" >
       List View
     </a>
@@ -57,3 +62,13 @@
   <div *ngSwitchCase="'list'">List View Content</div>
   <div *ngSwitchDefault>Something Else</div>
 </div>
+
+
+<!-- NGFOR ============================================================ -->
+<br><br><br><br><br>
+<h3>ngFor</h3>
+<ul>
+  <li *ngFor="let course of courses2; index as i; even as isEven">
+    {{ i + 1 }} - {{ course.name }} <span *ngIf="isEven">(EVEN)</span>
+  </li>
+</ul>
