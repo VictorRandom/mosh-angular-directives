@@ -64,14 +64,26 @@
 </div>
 
 
-<!-- NGFOR ============================================================ -->
+<!-- NGFOR & Change detection =============================================== -->
 <br><br><br><br><br>
-<h3>ngFor</h3>
+<h3>ngFor & Change detection</h3>
+
 <button class="btn btn-secondary" (click)="onAdd()">Add</button>
 <ul>
   <li *ngFor="let course of courses2; index as i; even as isEven">
     {{ i + 1 }} - {{ course.name }} <span *ngIf="isEven">(EVEN)</span>
     <button class="btn btn-danger" (click)="onRemove(course)">Remove</button>
     <button class="btn btn-warning" (click)="onChange(course)">Change</button>
+  </li>
+</ul>
+
+<!-- NGFOR & trackby =========================================================== -->
+<br><br><br><br><br>
+<h3>ngFor & trackby</h3>
+
+<button class="btn btn-secondary" (click)="loadCourses()">Load Courses</button>
+<ul>
+  <li *ngFor="let course of courses2; trackBy: trackCourse">
+    {{ course.name }}
   </li>
 </ul>
