@@ -134,3 +134,10 @@ Save
   [ngStyle]="{'color': 'black'}"
   *ngIf="task.assignee"
   >{{ task.assignee?.name }}</span>
+
+
+<!-- NGSTYLE =========================================================== -->
+<br><br><br><br><br>
+<h3 [ngStyle]="{'color': 'black'}">Directives</h3>
+
+<input type="text" appInputFormat [format]="'uppercase'">
